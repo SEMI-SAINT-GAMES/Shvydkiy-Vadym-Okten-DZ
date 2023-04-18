@@ -1,0 +1,47 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+}
+img{
+    width: 10vw;
+    height: 10vh;
+    margin-bottom: 70px;
+    margin-top: 70px;
+
+}
+
+div{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: roboto;
+    text-align: center;
+    
+}
+#orange{
+    
+    background-color: orange;
+    
+    
+}
+#blue {
+    background-color: aqua;
+    
+}
+#green{
+    
+    background-color: greenyellow;
+    
+}
+h3{
+    
+    font-size: 40px;
+}
+p{
+    width: 90vw;
+}

@@ -1,0 +1,26 @@
+body{
+    margin: 0;
+}
+div{
+    height: 50vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    
+}
+.pink{
+    background-color: pink;
+    font-family: roboto;
+}
+.black{
+    background-color: black;
+    font-family: roboto;
+    color: white;
+}
+p{
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
