@@ -1,0 +1,78 @@
+body{
+    
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Press Start 2P';
+    color: white;
+}
+.head{
+    width: 100vw;
+    height: 40px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    
+}
+h1{
+    margin: 0 auto;
+    text-align: center;
+    
+}
+form{
+    
+    background-image: radial-gradient(rgb(255, 171, 14), rgba(1, 1, 56, 0.1));
+    width: 800px;
+    height: 450px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 20px;
+    padding-left: 10px;
+    
+
+}
+label{
+    margin-top: 20px;
+}
+.field{
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    border-bottom: 3px solid black;
+    width: 400px;
+    height: 30px;
+    font-family: 'Press Start 2P';
+    font-size: 18px;
+
+}
+#check{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   
+
+}
+.buttons{
+    margin-top: 10px;
+}
+.button{
+    background-image: radial-gradient(rgb(79, 53, 5), rgb(0, 0, 0));
+    border: none;
+    border-radius: 0px;
+    width: 300px;
+    height: 40px;
+    font-family: 'Press Start 2P';
+   
+}
+#firstBut{
+    color: rgb(57, 131, 25);
+}
+#secondBut
+{
+    color: rgb(175, 61, 12);
+}

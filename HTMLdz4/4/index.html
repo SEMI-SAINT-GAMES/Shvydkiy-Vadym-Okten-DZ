@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P:regular" rel="stylesheet" />
+</head>
+<body>
+    <div class="head">
+    <h1>Заповніть поля анкети</h1>
+    
+</div>
+    <form>
+        <br>
+        <label>Ваше ім'я: <input class="field" type="text" name="name" required></label>
+        <br>
+        <label> Ваше прізвище: <input class="field" type="text" name="surname" required></label>
+        <br>
+        <label> Ваша стать: <input type="radio" name="sex" value="male"> Жіноча <input type="radio" name="sex" value="female"> Чоловіча</label>
+        <br>
+        <p>Послугами якої сотової компаніі ви користуєтеся:</p>
+        <div id="check">
+        <label><input type="checkbox" name="ks"> KyivStar <input type="checkbox" name="MTS"> MTS <input type="checkbox" name="Life"> Life:) <input type="checkbox" name="PN"> PeopleNet <input type="checkbox" name="Ut"> Utel </label>
+    </div>
+    <br>
+        <div class="buttons">
+        <input id="firstBut" class="button" type="submit" value="Надіслати анкету">
+        <input id="secondBut" class="button" type="reset" value="Очистити бланк">
+    </div>
+    </form>
+</body>
+</html>
