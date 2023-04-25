@@ -1,0 +1,68 @@
+body{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
+    font-family: arya;
+    flex-wrap: wrap;
+    background-image: url("https://i.pinimg.com/736x/2f/6b/b1/2f6bb1b9c06d40564f2c4a72988d54f4.jpg");
+    background-size: cover;
+}
+div{
+    border: 1px solid grey;
+    border-radius: 10px;
+    width: 420px;
+    height: 620px;
+    margin: 50px;
+    color: aliceblue;
+    background-color: rgba(214, 249, 249, 0.15);
+    padding-right: 10px;
+
+}
+div > ul > li::before
+ {
+    content: "  ";
+    width: 20px;
+    height: 20px;
+    background-image: url("favicon-32x32.png");
+    background-size: cover;
+    display: inline-block;
+    margin-right: 5px
+    ;
+ }
+div.first > ul > li:nth-child(even){
+
+color: pink;
+}
+div.second > ul > li:nth-child(odd){
+
+    font-size: 22px;
+ }
+div.third > ul > li:nth-child(2n + 5)::after{
+ content: "!";
+ color: yellow;
+ width: 20px;
+ height: 20px;
+ margin-left: 5px;
+ }    
+ div.fourth > ul > li:last-child{
+
+    color: purple;
+ }
+div.fifth > ul > li::first-letter
+{
+    color: aqua;
+}
+ .fifth
+ {
+    height: 750px;
+ }
+ 
+ li{
+    list-style: none;
+ }
+ h2{
+    margin-left: 20px;
+    
+ }

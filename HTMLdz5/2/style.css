@@ -1,0 +1,72 @@
+body{
+    margin: 0;
+    background-size: cover;
+   background-image: url("https://i.pinimg.com/564x/84/3f/a0/843fa0f9615c9570da5063eb3dbae910.jpg");
+}
+.main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+.window{
+    /* border: 1px solid brown;
+    width: 200px;
+    height: 400px; */
+    /* box-sizing: border-box;
+
+position: absolute; */
+margin: 20px;
+margin-top: 60px;
+
+width: 320px;
+height: 490px;
+background: rgba(217, 217, 217, 0.3);
+border: 4px solid #554C4C;
+display: flex;
+/* justify-content: center; */
+align-items: center;
+flex-wrap: wrap;
+flex-direction: column;
+transition: 0.5s;
+font-family: 'Vina Sans';
+
+
+
+
+}
+.circle{
+    position: relative;
+    top: -55px;
+    
+    border: 4px solid #554C4C;
+    border-radius: 100px;
+    width: 100px;
+    height: 100px;
+    background: rgb(217, 217, 217);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+p{
+    text-align: center;
+    margin: 10px;
+}
+h2{
+    font-size: 30px;
+}
+.window:hover{
+    width: 416px;
+    height: 637px;
+    transition: 0.5s;
+}
+#chess{
+    border: 4px solid #65856E;
+}
+#chessCircle{
+    border: 4px solid #65856E;
+}
