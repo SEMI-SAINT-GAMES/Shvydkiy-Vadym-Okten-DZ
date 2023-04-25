@@ -20,7 +20,7 @@ div{
     padding-right: 10px;
 
 }
-div > ul > li::before
+/* div > ul > li::before
  {
     content: "  ";
     width: 20px;
@@ -30,7 +30,8 @@ div > ul > li::before
     display: inline-block;
     margin-right: 5px
     ;
- }
+ } */
+ 
 div.first > ul > li:nth-child(even){
 
 color: pink;
@@ -38,6 +39,7 @@ color: pink;
 div.second > ul > li:nth-child(odd){
 
     font-size: 22px;
+    margin-left: 7px;
  }
 div.third > ul > li:nth-child(2n + 5)::after{
  content: "!";
@@ -60,7 +62,7 @@ div.fifth > ul > li::first-letter
  }
  
  li{
-    list-style: none;
+    list-style: decimal;
  }
  h2{
     margin-left: 20px;
