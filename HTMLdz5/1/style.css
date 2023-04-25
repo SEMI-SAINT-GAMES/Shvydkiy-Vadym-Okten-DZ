@@ -52,7 +52,7 @@ div.third > ul > li:nth-child(2n + 5)::after{
  }
 div.fifth > ul > li::first-letter
 {
-    color: aqua;
+    font-size: 30px;
 }
  .fifth
  {
