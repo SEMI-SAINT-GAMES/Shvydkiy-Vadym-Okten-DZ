@@ -1,0 +1,178 @@
+body{
+    margin: 0;
+    
+}
+.conteiner{
+    width: 100vw;
+    height: 100vh;
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+   
+
+}
+.a{
+    width: 98%;
+    height: 32vh;
+    background-color: rgb(41, 55, 55);
+    
+    
+    border-radius: 5px;
+  
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.bigWrap{
+   
+    width: 98%;
+    height: 65vh;
+    
+    
+    
+    border-radius: 5px;
+   
+    font-size: 40px;
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+.wrap{
+    width: 68.5vw;
+    height: 100%;
+   
+   
+    
+    border-radius: 5px;
+    
+    
+    font-size: 40px;
+    display: flex;
+    justify-content: space-between;
+   
+   flex-direction: column;
+    
+}
+.inWrap{
+    width: 32.5%;
+    height: 100%;
+    background-color: aqua;
+    
+    
+    border-radius: 5px;
+   
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.h{
+    width: 28.5vw;
+    height: 100%;
+    
+    background-color: bisque;
+    border-radius: 5px;
+    
+    
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+   align-items: center;
+   
+}
+.smallWrap{
+    width: 100%;
+    height: 49%;
+   
+    
+    
+    border-radius: 5px;
+    
+    font-size: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* .inWrap{
+    height: 32vh;
+    width: 32%;
+    background-color: aqua;
+    border: 1px solid black;
+} */
+
+ /*.b{
+    width: 71%;
+    height: 32vh;
+    background-color: aqua;
+    
+    
+    border-radius: 5px;
+    position: absolute;
+    top: 34vh;
+    left: 1vw;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+ .c{
+    width: 31%;
+    height: 100%;
+    background-color: aqua;
+    
+    
+    border-radius: 5px;
+   
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.d{
+    width: 31%;
+    height: 100%;
+    background-color: aqua;
+    
+    
+    border-radius: 5px;
+   
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.e{
+    width: 31%;
+    height: 100%;
+    background-color: aqua;
+    
+    
+    border-radius: 5px;
+    
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.f{
+    width: 26%;
+    height: 65vh;
+    background-color: aqua;
+    
+  
+    border-radius: 5px;
+    position: absolute;
+    top: 34vh;
+    left: 73vw;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}  */
