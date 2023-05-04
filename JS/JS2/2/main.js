@@ -161,30 +161,39 @@ else{
     {title: 'Frontend', monthDuration: 4}
 ];
 
-if (coursesAndDurationArray[0].monthDuration > 5)
+// Руки чесалися зробити це через цикл але вирішив не забігати наперед, зробив самописну імітацію циклу)))
+let i = 0
+if (coursesAndDurationArray[i].monthDuration > 5)
 {
-    console.log(coursesAndDurationArray[0].title + ` - Super!!!`);
+    console.log(coursesAndDurationArray[i].title + ` - Super!!!`);
 }
-if (coursesAndDurationArray[1].monthDuration > 5)
+i++
+if (coursesAndDurationArray[i].monthDuration > 5)
 {
-    console.log(coursesAndDurationArray[1].title + ` - Super!!!`);
+    console.log(coursesAndDurationArray[i].title + ` - Super!!!`);
 }
-if (coursesAndDurationArray[2].monthDuration > 5)
+i++
+if (coursesAndDurationArray[i].monthDuration > 5)
 {
-    console.log(coursesAndDurationArray[2].title + ` - Super!!!`);
+    console.log(coursesAndDurationArray[i].title + ` - Super!!!`);
 }
-if (coursesAndDurationArray[3].monthDuration > 5)
+i++
+if (coursesAndDurationArray[i].monthDuration > 5)
 {
-    console.log(coursesAndDurationArray[3].title + ` - Super!!!`);
+    console.log(coursesAndDurationArray[i].title + ` - Super!!!`);
 }
-if (coursesAndDurationArray[4].monthDuration > 5)
+i++
+if (coursesAndDurationArray[i].monthDuration > 5)
 {
-    console.log(coursesAndDurationArray[4].title + ` - Super!!!`);
+    console.log(coursesAndDurationArray[i].title + ` - Super!!!`);
 }
-if (coursesAndDurationArray[5].monthDuration > 5)
+i++
+if (coursesAndDurationArray[i].monthDuration > 5)
 {
-    console.log(coursesAndDurationArray[5].title + ` - Super!!!`);
+    console.log(coursesAndDurationArray[i].title + ` - Super!!!`);
 }
+
+
 
  
 
