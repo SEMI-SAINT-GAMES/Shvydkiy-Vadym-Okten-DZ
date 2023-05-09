@@ -1,0 +1,45 @@
+body{
+    margin: 0;
+}
+.conteiner{
+    width: 100vw;
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+    
+}
+.product-card {
+    display: flex;
+    flex-direction: column;
+    
+    width: 20vw;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+  }
+  
+  .product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px 5px 0 0;
+    
+  }
+  
+
+  .product-title {
+    
+    font-size: 22px;
+    font-weight: bold;
+    
+  }
+  
+  .product-price {
+    
+    font-size: 25px;
+    color: #007bff;
+  }
+  
