@@ -1,0 +1,87 @@
+body {
+    background-color: #000;
+    color: #ff0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: Anton;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+label {
+    display: block;
+    font-size: 24px;
+    margin: 10px;
+}
+
+select {
+    font-size: 24px;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    background-color: #ff0;
+    color: #000;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.button{
+    font-size: 24px;
+    padding: 10px;
+    margin: 10px;
+    border: 3px solid green;
+    background-color: rgb(113, 195, 6);
+    color: #000;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: Anton;
+    text-align: center;
+}
+input[type="number"] {
+    font-size: 24px;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    background-color: #ff0;
+    color: #000;
+    border-radius: 10px;
+}
+
+.result {
+    
+    text-align: center;
+    font-size: 24px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.resultInp{
+    background-color: #ff0;
+    border: none;
+    width: 80vw;
+    height:10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-family: Anton;
+    padding-left: 20px;
+    border-radius: 10px;
+}
+
+.result label {
+    font-weight: bold;
+    margin-right: 10px;
+}

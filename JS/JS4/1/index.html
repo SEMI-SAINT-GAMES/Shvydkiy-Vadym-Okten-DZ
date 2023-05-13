@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <script src="main.js"></script>
+   <div class="main">
+    <div class="calculator">
+        <h2>Count Square Area</h2>
+        <input class="field" type="text" name="a"  id="sideA" placeholder="Enter side A" required>
+        <input class="field" type="text" name="b"  id="sideB" placeholder="Enter side B" required>
+        <input class="result" type="text" id="resultSqr" value="Result" readonly>
+        <input class="button" type="submit" value="Calculate" onclick="sqrArea()">
+
+      </div>
+
+      <div class="calculator">
+        <h2>Count Circle Area</h2>
+        <input class="field" type="text" name="r"  id="circRad" placeholder="Enter radius" required>
+        <input class="result" type="text" id="resultCirc" value="Result" readonly>
+        <input class="button" type="submit" value="Calculate" onclick="CircleArea()">
+
+      </div>
+
+      <div class="calculator">
+        <h2>Count Cylinder Area</h2>
+        <input class="field" type="text" name="rCyl"  id="cylRad" placeholder="Enter radius" required>
+        <input class="field" type="text" name="hCyl"  id="cylHeiht" placeholder="Enter height" required>
+        <input class="result" type="text" id="resultCyl" value="Result" readonly>
+        <input class="button" type="submit" value="Calculate" onclick="cylinderArea()">
+
+      </div>
+    </div>  
+
+</body>
+</html>
