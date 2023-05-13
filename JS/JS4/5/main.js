@@ -44,7 +44,10 @@ function Exchange()
         break;    
     }
     document.getElementById("result").value = `For buy: ${buyResult}              For sale: ${saleResult}`
-    // document.write(`<p> For buy: ${buyResult}, For sale: ${saleResult} </p>`)
+    // document.write(`<p> For buy: ${buyResult}, For sale: ${saleResult} </p>`)  КОЛИ РОБЛЮ ОСЬ ТАК ОТРИМУЮ ПОМИЛКУl: form submission canceled because the form is not connected
+    // Текст відображається, але на новій сторінці і без стилізаціі, не можу зрозуміти в чому причина
+
+
 }
 function write() {
     
