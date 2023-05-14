@@ -49,7 +49,5 @@ function Exchange()
 
 
 }
-function write() {
-    
-}
+
 
