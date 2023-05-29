@@ -105,9 +105,7 @@ console.log(addId);
 //  описати колоду карт (від 6 до туза без джокерів)
 
 
-const cardTitles = [
-  `6`, `7`, `8`, `9`, `10`, `jet`, `queen`, `king`, `ace` 
-]
+const cardTitles = [`6`, `7`, `8`, `9`, `10`, `jet`, `queen`, `king`, `ace` ]
 
 let cards = []
 let cardtitleIndex = 0;
@@ -168,22 +166,25 @@ let findAceOfSpades = cards.map(value => {
 })
 console.log(findAceOfSpades);
 //АБО
-
-  for (el of cards)
-  {
+for (el of cards) {
     if (el.title === `ace` && el.suit == `spades`)
     {
       console.log(el)
     }
-
-  
-}
+  }
 
 //  - всі шістки
+let findSix = cards.filter(value => value.title === `6`);
+console.log(findSix);
 //  - всі червоні карти
+let findReds = cards.filter(value => value.color === `red`)
+console.log(findReds)
 //  - всі буби
+let findDiamonds = cards.filter(value => value.suit === `diamonds`)
+console.log(findDiamonds)
 //  - всі трефи від 9 та більше
-
+let findClubs9orHigher = cards.filter(value => value.suit === `clubs`).filter(value => value.title != `6` && value.title!= `7` && value.title != `8`)//АБО .filter(value => value.title != `7`).filter(value => value.title != `8`)
+console.log(findClubs9orHigher)
 // {
 //     cardSuit: '', // 'spade', 'diamond','heart', 'clubs'
 //     value: '', // '6'-'10', 'ace','jack','queen','king','joker'
@@ -199,7 +200,101 @@ console.log(findAceOfSpades);
 //     hearts:[],
 //     clubs:[]
 // }
+let reduceCards = cards.reduce((accumulator, el) => {
+  if (el.suit === `spades`)
+  {
+    accumulator.spades.push(el)
+  }
+  else if(el.suit === `diamonds`)
+  {
+    accumulator.diamonds.push(el)
+  }
+  else if(el.suit === `hearts`)
+  {
+    accumulator.hearts.push(el)
+  }
+  else if(el.suit === `clubs`)
+  {
+    accumulator.clubs.push(el)
+  }
+  return accumulator
+}, {spades:[], diamonds:[], hearts:[], clubs:[]})
+console.log(reduceCards)
+
 // =========================
 // взяти з arrays.js (який лежить в папці 2023 plan) масив coursesArray
+let coursesArray = [
+  {
+      title: 'JavaScript Complex',
+      monthDuration: 5,
+      hourDuration: 909,
+      modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'node.js']
+  },
+  {
+      title: 'Java Complex',
+      monthDuration: 6,
+      hourDuration: 909,
+      modules: ['html',
+          'css',
+          'js',
+          'mysql',
+          'mongodb',
+          'angular',
+          'aws',
+          'docker',
+          'git',
+          'java core',
+          'java advanced']
+  },
+  {
+      title: 'Python Complex',
+      monthDuration: 6,
+      hourDuration: 909,
+      modules: ['html',
+          'css',
+          'js',
+          'mysql',
+          'mongodb',
+          'angular',
+          'aws',
+          'docker',
+          'python core',
+          'python advanced']
+  },
+  {
+      title: 'QA Complex',
+      monthDuration: 4,
+      hourDuration: 909,
+      modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'git', 'QA/QC']
+  },
+  {
+      title: 'FullStack',
+      monthDuration: 7,
+      hourDuration: 909,
+      modules: ['html',
+          'css',
+          'js',
+          'mysql',
+          'mongodb',
+          'react',
+          'angular',
+          'aws',
+          'docker',
+          'git',
+          'node.js',
+          'python',
+          'java']
+  },
+  {
+      title: 'Frontend',
+      monthDuration: 4,
+      hourDuration: 909,
+      modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'sass']
+  }
+];
 // --написати пошук всіх об'єктів, в який в modules є sass
+let findSass = coursesArray.filter(value => value.modules.find(value => value === `sass`))
+console.log(findSass)
 // --написати пошук всіх об'єктів, в який в modules є docker
+let findDocker = coursesArray.filter(value => value.modules.find(value => value === `docker`))
+console.log(findDocker)
