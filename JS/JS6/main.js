@@ -103,20 +103,86 @@ let addId = coursesAndDurationArray.map((value) => {
 console.log(addId);
 //  =========================
 //  описати колоду карт (від 6 до туза без джокерів)
-//  - знайти піковий туз
+
+
+const cardTitles = [
+  `6`, `7`, `8`, `9`, `10`, `jet`, `queen`, `king`, `ace` 
+]
+
+let cards = []
+let cardtitleIndex = 0;
+for (let i = 0; i < 36; i++)
+{
+  let card = {
+    title: ``,
+    suit: ``,
+    color: ``
+  }
+  if (cardtitleIndex < 9){
+      card.title = cardTitles[cardtitleIndex]
+      cardtitleIndex++;
+  }
+  else{ 
+    cardtitleIndex = 0
+    card.title = cardTitles[cardtitleIndex]
+      cardtitleIndex++;
+  };
+
+  if (i < 9)
+  {
+    card.suit = 'spades'
+    card.color = `black`
+  }
+  else if (i < 18)
+  {
+    card.suit = 'hearts'
+    card.color = `red`
+  }
+  else if (i < 27)
+  {
+    card.suit = 'diamonds'
+    card.color = `red`
+  }
+  else
+  {
+    card.suit = 'clubs'
+    card.color = `black`
+  }
+  cards.push(card);
+}
+console.log(cards)
+
+ //  - знайти піковий туз
+
+let findAceOfSpades = cards.map(value => {
+  let newCard = value
+  if (newCard.title === `ace` && newCard.suit == `spades`)
+  {
+    return newCard;
+  }
+  else{
+    newCard = `Not an Ace of Spades`;
+    return newCard
+  }
+
+})
+console.log(findAceOfSpades);
+//АБО
+
+  for (el of cards)
+  {
+    if (el.title === `ace` && el.suit == `spades`)
+    {
+      console.log(el)
+    }
+
+  
+}
+
 //  - всі шістки
 //  - всі червоні карти
 //  - всі буби
 //  - всі трефи від 9 та більше
-
-let cards = [
-    {title: `6`, 
-     suit: `space`} ,
-     {
-        
-     }
-
-]
 
 // {
 //     cardSuit: '', // 'spade', 'diamond','heart', 'clubs'
