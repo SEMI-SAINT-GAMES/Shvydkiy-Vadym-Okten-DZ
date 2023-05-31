@@ -1,0 +1,22 @@
+body{
+  font-family: "Bebas Neue";
+}
+.course-div{
+  display: flex;
+  background-color: aqua;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 90vw;
+  
+  margin-top: 20px;
+}
+.duration{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: beige;
+}
+  
