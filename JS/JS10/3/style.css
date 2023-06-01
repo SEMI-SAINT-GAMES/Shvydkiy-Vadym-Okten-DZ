@@ -1,0 +1,29 @@
+
+.hide{
+    border: 1px solid black;
+}
+.markup{
+    display: flex;
+    flex-direction: column;
+
+}
+#markupDiv{
+    width: 96vw;
+    height: 300px;
+   border: 1px solid red;
+}
+.box{
+    
+    height: 100%;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.verticalBox{
+    width: 100%;
+    border: 1px solid yellow;
+    background-color: aqua;
+    display: flex;
+    flex-direction: row;
+}
