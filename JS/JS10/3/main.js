@@ -87,32 +87,37 @@ form2.onsubmit = function(e){
       }
     let horizontal = form2.horizontal.value
     let vertical = form2.vertical.value
-    
-    let boxWidth = 100 / horizontal
-    let boxHeight = 100 / vertical
-    console.log(boxHeight)
-    for(let i = 0; i < vertical; i++){
+    if ((horizontal< 100 && vertical < 100))
+    {
+        let boxWidth = 100 / horizontal
+        let boxHeight = 100 / vertical
+         console.log(boxHeight)
+      for(let i = 0; i < vertical; i++){
         let verticalBox = document.createElement(`div`)
         div.appendChild(verticalBox)
         verticalBox.classList.add(`verticalBox`)
         verticalBox.style.height = boxHeight + `%`
+        
          for(let j = 0; j < horizontal; j++)
          {
             let box = document.createElement(`div`)
             verticalBox.appendChild(box)
             box.classList.add(`box`)
-           
+            box.style.backgroundColor = `rgb(${colorCounter + Math.floor( Math.random() * (200 - 2 + 1) +2) },  ${colorCounter + Math.floor( Math.random() * (200 - 2 + 1) + 2)}, ${colorCounter + Math.floor( Math.random() * (200 - 2 + 1) + 2)}`
             box.style.width = boxWidth + `%`
             box.innerText = form2.inside.value
+            
+            
          }
-        // let box = document.createElement(`div`)
-        // div.appendChild(box)
-        // box.classList.add(`box`)
-        // box.style.backgroundColor = `red`
+      
         
-
+      }
     }
-    
+    else{
+        div.innerText = `respect a fucking browser`
+        console.log(horizontal + vertical)
+    }
+ 
 }
 // (Додатковачастина для завдання)
 
