@@ -1,0 +1,12 @@
+
+div{
+    width: 98vw;
+    height: 30vh;
+    margin-top: 20px;
+    border: 1px solid black;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+}
