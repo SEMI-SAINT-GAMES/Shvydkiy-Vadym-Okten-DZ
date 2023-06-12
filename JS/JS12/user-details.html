@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+        let url = new URL(location.href)
+        const userId = url.search.slice(-1)
+        console.log(userId)
+        fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
+        .then(value => value.json())
+        .then(value => {
+            
+            for (const key in value) {
+  const li = document.createElement('li');
+  
+  li.innerText = `${key}: ${JSON.stringify(value[key]).replaceAll(`"`, ` `).replaceAll(`}`, ` `).replaceAll(`{`, ` `)}`;
+  document.body.appendChild(li);
+ }
+})
+
+    </script>
+</body>
+</html>
