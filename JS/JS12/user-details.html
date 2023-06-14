@@ -10,7 +10,7 @@
     
 <script>
         let url = new URL(location.href)
-        const userId = url.search.slice(-1)
+        const userId = url.search.slice(4)
         console.log(userId)
         fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
         .then(value => value.json())

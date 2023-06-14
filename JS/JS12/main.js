@@ -1,7 +1,7 @@
 // зробити файл users.html
 // з ендпоінту http://jsonplaceholder.typicode.com/users отримати всіх користувачів
 let url = new URL("https://jsonplaceholder.typicode.com/users");
-let usersArr = []
+
 fetch(url)
   .then(value => value.json())
   .then(value => {
