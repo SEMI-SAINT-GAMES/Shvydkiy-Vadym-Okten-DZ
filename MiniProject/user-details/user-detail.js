@@ -28,9 +28,12 @@ h4.innerText = `${key}: ${JSON.stringify(value[key]).replaceAll(`"`, ` `).replac
         fetch(`https://jsonplaceholder.typicode.com/users/${id}/posts`)
         .then(title => title.json())
         .then(title => {
+            const titleConteiner = document.createElement(`div`)
+            document.body.appendChild(titleConteiner)
+            titleConteiner.classList.add(`titleConteiner`)
             for(let key in title){
                 const titleDiv = document.createElement(`div`)
-                document.body.appendChild(titleDiv)
+                titleConteiner.appendChild(titleDiv)
                 titleDiv.classList.add(`titleDiv`)
                 const titleLi = document.createElement('p');
                 const button = document.createElement(`button`);

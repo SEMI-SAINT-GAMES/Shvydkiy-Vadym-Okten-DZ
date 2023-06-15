@@ -27,8 +27,8 @@ fetch(url)
      div.appendChild(id)
      div.appendChild(userName)
      div.appendChild(button)
-      id.innerText = `User ID: ${user.id}`;
-      userName.innerText = `User Name: ${user.name}`
+      id.innerText = `ID: ${user.id}`;
+      userName.innerText = `Name: ${user.name}`
      button.innerText = `See details`
      button.addEventListener(`click`, function(){
         location.href = `../user-details/user-details.html?${user.id}`;
