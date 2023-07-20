@@ -6,10 +6,11 @@ import {createContext, useState} from "react";
 
 export const ChildContext = createContext(null)
 function App() {
-  const [isChild1_1, setIsChild1_1] = useState(null)
- const ar = [{name: "Vasya", age:41, prof:"Doctor"}, {name: "Igor", age:39, prof:"Prosecutor"}, {name: "Alex", age:18, prof:"Developer"}]
+    const ar = [{name: "Vasya", age:41, prof:"Doctor"}, {name: "Igor", age:39, prof:"Prosecutor"}, {name: "Alex", age:18, prof:"Developer"}]
+  const [isChild1_1, setIsChild1_1] = useState(ar)
+
   return (
-      <ChildContext.Provider value={{ar, setIsChild1_1, isChild1_1}}>
+      <ChildContext.Provider value={{setIsChild1_1, isChild1_1}}>
     <div className="App">
         <h2>Начебто передав інформацію, однак чайлд1.1 треба оновлювати вручну</h2>
     <Child1/>

@@ -4,17 +4,17 @@ import {ChildContext} from "../../App";
 export const SubChild2_2 = () =>{
     const [re, setRe] = useState(null)
     const cont = useContext(ChildContext)
-    const {ar, setIsChild1_1, isChild1_1} = cont
+    const {setIsChild1_1, isChild1_1} = cont
      const arPlus = () => {
-        ar.push({name: "Kostya", age:30, prof: "Blogger"})
+        isChild1_1.push({name: "Kostya", age:30, prof: "Blogger"})
          setRe([])
-         console.log(ar)
+         console.log(isChild1_1)
      }
     return(
         <div className="subChild">
             <p>2_2</p>
             <div>{
-                ar.map((person, id ) => {
+                isChild1_1.map((person, id ) => {
                     return(
                         <div key ={id}>
                         <p>{person.name}</p>

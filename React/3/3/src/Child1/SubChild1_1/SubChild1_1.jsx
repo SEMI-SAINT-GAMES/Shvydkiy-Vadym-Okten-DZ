@@ -4,10 +4,12 @@ import {ChildContext} from "../../App";
 export const SubChild1_1 = () =>{
 
     const info = useContext(ChildContext)
-    const {ar, setIsChild1_1, isChild1_1} = info
+    const {setIsChild1_1, isChild1_1} = info
     const [re, setRe] = useState(info)
-
-
+    useEffect((isChild1_1) =>{
+          setRe([])
+        console.log(isChild1_1)
+      }, [isChild1_1])
     return(
         <div className="subChild">
             <p>1_1</p>
@@ -24,7 +26,7 @@ export const SubChild1_1 = () =>{
             {/*    <p>{ar[2].age}</p>*/}
             {/*    <p>{ar[2].prof}</p>*/}
             {/*</div>}*/}
-            {<div>{ ar.map((person, id ) => {
+            {<div>{ isChild1_1.map((person, id ) => {
                 return(
                     <div key ={id}>
                         <p>{person.name}</p>
