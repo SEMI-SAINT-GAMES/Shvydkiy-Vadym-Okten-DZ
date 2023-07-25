@@ -1,9 +1,10 @@
+// http://owu.linkpc.net/carsAPI/v1/doc
+//     Реалізувати створення, видалення та оновлення машин
 import logo from './logo.svg';
 import './App.css';
 import {Cars} from "./Cars/Cars";
 import {Form} from "./Form/Form";
 import {FormUpdate} from "./FormUpdate/FormUpdate";
-
 function App() {
   return (
     <div className="App">
@@ -19,5 +20,4 @@ function App() {
     </div>
   );
 }
-
 export default App;

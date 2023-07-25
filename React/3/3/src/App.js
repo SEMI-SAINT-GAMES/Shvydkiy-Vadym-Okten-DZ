@@ -1,3 +1,12 @@
+// context
+// Зробити структуру компонентів -
+// App
+// Child1                              Child2
+// SubChild1_1    SubChild1_2          SubChild2_1    SubChild2_2
+//
+// Тепер завдання:
+//     З SubChild2_2 передати данні (будь-які) в SubChild1_1
+
 import logo from './logo.svg';
 import './App.css';
 import {Child1} from "./Child1/Child1";
@@ -12,7 +21,7 @@ function App() {
   return (
       <ChildContext.Provider value={{setIsChild1_1, isChild1_1}}>
     <div className="App">
-        <h2>Начебто передав інформацію, однак чайлд1.1 треба оновлювати вручну</h2>
+
     <Child1/>
       <Child2/>
     </div>

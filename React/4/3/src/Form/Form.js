@@ -8,14 +8,7 @@ export const Form = () => {
                 method: 'POST',
                 body: JSON.stringify(car),
                 headers:{'content-type':'application/json'}
-
-
-            }).then(value => value.json()).then((value) => {
-
-            console.log(car)
-
-        })
-    }
+            }).then(value => value.json()).then((value) => {})}
     return(
         <form onSubmit={handleSubmit(save)}>
             <label>Brand<input type="text" {...register('brand')}/></label>

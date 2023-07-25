@@ -1,3 +1,7 @@
+// Реалізувати, використовуючи useForm хук, а також сервіс axios наступне. Всі запити винести в сервісний рівень
+// 3.
+// http://owu.linkpc.net/carsAPI/v1/doc
+//     Реалізувати створення, видалення та оновлення машин
 import logo from './logo.svg';
 import './App.css';
 import {Cars} from "./Cars/Cars";

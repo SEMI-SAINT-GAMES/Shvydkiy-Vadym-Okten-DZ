@@ -1,3 +1,7 @@
+
+// Зробити компонент, в якому буде форма, за допомоги якої можливо створити нового юзера постовим запитом
+// на http://jsonplaceholder.typicode.com/users
+
 import logo from './logo.svg';
 import './App.css';
 import {Users} from "./Users/Users";
@@ -9,13 +13,10 @@ function App() {
     const [users, setUsers] = useState([])
   return (
     <div className="App">
-
-
-      <Users onAdd = {onAdd} users = {users} setUsers ={setUsers}/>
+        <Users onAdd = {onAdd} users = {users} setUsers ={setUsers}/>
         <hr/>
         <Form setOnAdd = {setOnAdd} onAdd = {onAdd} users = {users} setUsers = {setUsers}/>
     </div>
   );
 }
-
 export default App;

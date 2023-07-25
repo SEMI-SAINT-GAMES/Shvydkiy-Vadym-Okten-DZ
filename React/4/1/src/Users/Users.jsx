@@ -2,9 +2,6 @@ import {User} from "./User/User";
 import {useEffect} from "react";
 
 export const Users = ({setUsers, users}) => {
-
-
-
     useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/users')
         .then((res) => res.json())
@@ -14,12 +11,11 @@ export const Users = ({setUsers, users}) => {
 }, [])
 return (
     <div>
-        ss
-        {/*{users.map((user, id) =>{*/}
-        {/*    return(*/}
-        {/*        <User key = {id} user = {user}/>*/}
-        {/*    )*/}
-        {/*} )}*/}
+
+        {users.map((user, id) =>{
+            return(
+                <User key = {id} user = {user}/>
+            )
+        } )}
     </div>
-)
-}
+)}

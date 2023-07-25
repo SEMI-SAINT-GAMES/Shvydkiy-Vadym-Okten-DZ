@@ -1,4 +1,7 @@
-import logo from './logo.svg';
+
+// Реалізувати, використовуючи useForm хук, а також сервіс axios наступне. Всі запити винести в сервісний рівень
+// 1.
+// Зробити компонент, в якому буде форма, за допомоги якої можливо створити нового юзера постовим запитом на http://jsonplaceholder.typicode.com/usersimport logo from './logo.svg';
 import './App.css';
 import {Users} from "./Users/Users";
 import {Form} from "./Form/Form";

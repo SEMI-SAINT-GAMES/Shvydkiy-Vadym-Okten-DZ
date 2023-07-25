@@ -16,8 +16,10 @@ export const SubChild2_2 = () =>{
             <div>{
                 isChild1_1.map((person, id ) => {
                     return(
-                        <div key ={id}>
+                        <div key ={id} style={{border:"1px solid black", margin:"10px"}}>
                         <p>{person.name}</p>
+                            <p>{person.age}</p>
+                            <p>{person.prof}</p>
                         </div>
                     )
                 })

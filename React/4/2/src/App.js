@@ -1,3 +1,5 @@
+//Зробити компонент, в якому буде форма, за допомоги якої можливо створити новий комментар постовим
+// запитом на http://jsonplaceholder.typicode.com/comments
 import logo from './logo.svg';
 import './App.css';
 

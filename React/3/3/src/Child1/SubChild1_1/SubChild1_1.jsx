@@ -8,24 +8,11 @@ export const SubChild1_1 = () =>{
     const [re, setRe] = useState(info)
     useEffect((isChild1_1) =>{
           setRe([])
-        console.log(isChild1_1)
-      }, [isChild1_1])
+
+      }, [re])
     return(
         <div className="subChild">
             <p>1_1</p>
-            {/*{!isChild1_1 && <div>*/}
-            {/*    <p>{ar[0].name}</p>*/}
-            {/*    <p>{ar[0].age}</p>*/}
-            {/*    <p>{ar[0].prof}</p>*/}
-            {/*    <hr/>*/}
-            {/*    <p>{ar[1].name}</p>*/}
-            {/*    <p>{ar[1].age}</p>*/}
-            {/*    <p>{ar[1].prof}</p>*/}
-            {/*    <hr/>*/}
-            {/*    <p>{ar[2].name}</p>*/}
-            {/*    <p>{ar[2].age}</p>*/}
-            {/*    <p>{ar[2].prof}</p>*/}
-            {/*</div>}*/}
             {<div>{ isChild1_1.map((person, id ) => {
                 return(
                     <div key ={id}>
