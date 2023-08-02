@@ -12,7 +12,6 @@ class Posts extends Component{
     componentDidMount() {
         axios.get(`https://jsonplaceholder.typicode.com/posts`).then(({data}) => this.setState({posts:data}))
     }
-
     render() {
         return(
             <div className="Posts">

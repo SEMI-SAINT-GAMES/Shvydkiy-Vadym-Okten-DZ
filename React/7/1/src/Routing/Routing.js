@@ -3,7 +3,6 @@ import {Posts} from "../Posts/Posts";
 import {Comments} from "../Comments/Comments";
 import {Cars} from "../Cars/Cars";
 
-
 const Header = () =>{
     return (
         <div>
@@ -34,9 +33,6 @@ export const Routing = createBrowserRouter([
                 path: "/cars",
                 element: <Cars/>
             }
-
-        ]
-    }
-
-])
+            ]}]
+)
 

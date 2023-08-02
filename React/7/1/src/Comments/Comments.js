@@ -12,7 +12,6 @@ class Comments extends Component{
     componentDidMount() {
         axios.get(`https://jsonplaceholder.typicode.com/comments`).then(({data}) => this.setState({comments:data}))
     }
-
     render() {
         return(
             <div className="Posts">
