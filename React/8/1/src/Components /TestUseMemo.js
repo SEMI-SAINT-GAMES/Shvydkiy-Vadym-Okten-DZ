@@ -17,10 +17,11 @@ export const TestUseMemo = ({data}) => {
         return value
     }
 
-    const calc = useMemo( expenciveCalc(calcul), [calcul])
+    const calc = useMemo( () => expenciveCalc(calcul), [calcul])
 
     return(
         <>
+           
             <p>data :{calc}</p>
             <button onClick={() => {setPlus(plus + 1)}}>++</button>
             <p>{plus}</p>

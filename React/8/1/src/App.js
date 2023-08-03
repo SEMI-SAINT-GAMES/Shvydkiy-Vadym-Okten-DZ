@@ -19,7 +19,7 @@ import {TestUseMemo} from "./Components /TestUseMemo";
 function App() {
   return (
     <div className="App">
-      <TestUseMemo/>
+      <TestUseMemo data = {1}/>
     </div>
   );
 }
