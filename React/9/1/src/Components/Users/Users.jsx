@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
 export const Users = ({}) => {
     const dispatch = useDispatch()
     const char = useSelector((store) => store.characters.results)
+    console.log(char)
     useEffect(() => {
        apiService.getCh()
            .then((value) => value.data)
@@ -15,10 +16,12 @@ export const Users = ({}) => {
            
     }, [])
 return (
-    <div>
+    <div className="MainDivChar">
         {char.map((user, id) =>{
             return(
+              
                 <User key = {id} user = {user}/>
+         
             )})}
     </div>
 )}

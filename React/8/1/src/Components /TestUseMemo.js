@@ -21,7 +21,7 @@ export const TestUseMemo = ({data}) => {
 
     return(
         <>
-           
+
             <p>data :{calc}</p>
             <button onClick={() => {setPlus(plus + 1)}}>++</button>
             <p>{plus}</p>

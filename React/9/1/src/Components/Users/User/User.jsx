@@ -3,6 +3,7 @@ export const User = (props) =>{
     return(
         <div className="CharDiv">
          <p>{user.name}</p>
+         <img src={user.image}/>
            
           
         </div>
