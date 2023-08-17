@@ -15,7 +15,7 @@ export const CarReduser = (state = initialState, action) => {
         case actionTypes.SET_CARS:
         return {
             ...state, 
-            cars: action.payload.cars
+            cars: action.payload
         }
         case actionTypes.SET_ERROR:
             return {
