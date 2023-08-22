@@ -12,5 +12,8 @@ export const getCars = () => (dispatch) => {
     .then((value) => value.data)
        .then((data) => dispatch(actions.setCars(data)) )
 }
+export const saveCar = () => (dispatch) => {
+    Services.post(data)
+}
 
 
