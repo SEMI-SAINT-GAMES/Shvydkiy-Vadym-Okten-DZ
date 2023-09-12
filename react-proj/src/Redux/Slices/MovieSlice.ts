@@ -1,14 +1,22 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit"
 import { IMovie } from "../../Interfaces/MovieInterface"
+import { IMoviePage } from "../../Interfaces/MoviePageInterface"
 import { movieService } from "../../Services/MovieService"
-// interface IState {
-//     movies: {},
-//     error: null
+interface IState {
+    moviePage: IMoviePage,
+    movies: IMovie[],
+    error: null
     
-// }
+}
 
-const initialState = {
-    movies: {},
+const initialState: IState = {
+    moviePage: {
+        page: 0,
+        results: [],
+        total_pages: 0,
+        total_results: 0
+    },
+    movies: [],
     error: null
     
     
@@ -34,12 +42,18 @@ const MovieSlice = createSlice({
     reducers:{},
     extraReducers: builder => builder
     .addCase(getAllMovies.fulfilled, (state, action) => {
-        state.movies = action.payload
+        state.moviePage = action.payload
+        state.movies = action.payload.results
         
     })
     .addCase(getAllMovies.rejected, (state, actions) => {
         state.movies = [];
-        
+        state.moviePage = {
+            page: 0,
+        results: [],
+        total_pages: 0,
+        total_results: 0
+        };
         
     })
   })
