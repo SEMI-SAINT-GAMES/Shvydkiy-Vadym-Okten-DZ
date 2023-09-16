@@ -13,8 +13,10 @@ const pathParams = {
 const queryParams = {
 
 }
+const imageBaseURL = `https://image.tmdb.org/t/p/w500`
 export{
 
 movieLists,
-pathParams
+pathParams,
+imageBaseURL
 }

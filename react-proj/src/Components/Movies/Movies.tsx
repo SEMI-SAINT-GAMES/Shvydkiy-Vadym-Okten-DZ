@@ -1,7 +1,7 @@
-import { FC, PropsWithChildren, useEffect } from "react"
+import { FC, PropsWithChildren, useEffect, useState } from "react"
+import { useSearchParams } from "react-router-dom"
 import { useAppDispatch, useAppSelector } from "../../Hooks/reduxHooks"
 import { getAllMovies, MovieActions } from "../../Redux/Slices/MovieSlice"
-import { movieService } from "../../Services/MovieService"
 import { Movie } from "./Movie/Movie"
 
 
@@ -10,25 +10,20 @@ interface IProps extends PropsWithChildren{
 
 }
 
+
 export const Movies: FC<IProps>= () => {
      const dispatch = useAppDispatch()
     const {movies, moviePage} = useAppSelector(state => state.movies)
-    
-    
-
+    const [querry, setQuerry] = useSearchParams({page: `1`})
     useEffect(() => {
-        dispatch(getAllMovies())
+        dispatch(getAllMovies({page: +querry.get(`page`)!}))
         
-    }, [])
-
-    
-    
+    }, [querry.get(`page`)])
     console.log(movies)
-    console.log(moviePage)
     return(
-        <div>
+        <div className="Movies">
             {movies.map(movie => <Movie key = {movie.id} movie = {movie}/>)}
-            <button>Page+</button>
+            
         </div>
     )
 }

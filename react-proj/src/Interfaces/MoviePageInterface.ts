@@ -1,4 +1,4 @@
-export interface IMoviePage  {
+export interface IMoviePage<T>  {
     
 page: number;
 results: [];

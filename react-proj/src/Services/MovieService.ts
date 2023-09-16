@@ -1,3 +1,4 @@
+
 import { accessToken } from "../Constants/AccessToken"
 import { movieLists, pathParams } from "../Constants/Urls"
 import { IMovie } from "../Interfaces/MovieInterface"
@@ -12,7 +13,9 @@ const Token: ITokens = {
 }
 
 const movieService = {
-     getMovies: () => apiService.get(`/movie${movieLists.popular}?language=en-US&page=1`, Token)
+     getMovies: (page: number) => apiService.get(`/movie${movieLists.popular}?language=en-US&page=${page}`, Token,), 
+     getMovieById: (id: number) => apiService.get(`/movie/${id}?language=en-US`, Token,),
+     getMovieBySearch: (params: string) => apiService.get(`/search/movie?query=${params}&include_adult=true&language=en-US&page=1`)
 }
 //: IRes<IMoviePage>
 export{

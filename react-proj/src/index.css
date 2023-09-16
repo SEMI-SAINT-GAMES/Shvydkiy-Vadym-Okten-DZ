@@ -11,3 +11,94 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.pages{
+  display: flex;
+  justify-content: center;
+}
+.Header{
+  width: 100vw;
+  height: 70px;
+  background-color: rgb(71, 69, 0);
+  display: flex;
+  flex-direction: row-reverse;
+  padding-right: 30px;
+}
+.avatar{
+  height: 100%;
+  width: 40px;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  /*position:relative;
+  left: 90vw; */
+  
+}
+.switcher{
+  height: 100%;
+  width: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  
+}
+.moviesConteiner{
+  
+  margin: 0 auto;
+  padding: 20px;
+  /* background-color: rgb(132, 132, 154); */
+}
+.Movies{
+  display: grid;
+  grid-gap: 20px;
+  
+ 
+}
+@media (min-width: 350px) {
+  .Movies {
+    grid-template-columns: repeat(2, 1fr); /* 3 колонки на один ряд */
+  }
+}
+@media (min-width: 650px) {
+  .Movies {
+    grid-template-columns: repeat(3, 1fr); /* 3 колонки на один ряд */
+  }
+}
+
+@media (min-width: 920px) {
+  .Movies {
+    grid-template-columns: repeat(4, 1fr); /* Повертаємо 4 колонки на один ряд */
+  }
+}
+
+.movie {
+  background-color: #FFD700;
+  border: 1px solid #FFD700;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 5px 5px 5px #000000;
+  max-width: 100%; 
+  
+ 
+
+}
+.movie img {
+  max-width: 100%;
+  height: auto;
+}
+.movieTitle{
+  height: 100px;
+}
+.movie h2 {
+  margin: 10px 0;
+  color: #333; /* Темний текст */
+  
+}
+.searchDiv{
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+ margin-right: 70px;
+}
