@@ -9,7 +9,6 @@ interface IState {
     total_results: number
     total_pages: number
 }
-
 const initialState: IState = {
     moviePage: {
         page: 1,
@@ -24,11 +23,11 @@ const initialState: IState = {
     
     
 }
-const getMovieSearch = createAsyncThunk<IMoviePage<IMovie>, {params: string, page: string}>(
-    'MovieSlice/getMovieSearch',
-    async ({params, page}, {rejectWithValue})=> {
+const getAllMoviesByGenre = createAsyncThunk<IMoviePage<IMovie>, {id:number, page:string}>(
+    'MoviesByGenreSlice/getAllMoviesByGenre',
+    async ({id, page}, {rejectWithValue})=> {
         try{
-          const {data} = await movieService.getMovieBySearch(params, page)
+          const {data} = await movieService.getMoviesByGenre(id, page)
           return data
           
         }catch(e){
@@ -36,19 +35,19 @@ const getMovieSearch = createAsyncThunk<IMoviePage<IMovie>, {params: string, pag
         }
     }
 )
-const MovieSearchSlice = createSlice({
-    name:'movieSlice',
+const MoviesByGenreSlice = createSlice({
+    name:'MoviesByGenreSlice',
     initialState,
     reducers:{},
     extraReducers: builder => builder
-    .addCase(getMovieSearch.fulfilled, (state, action) => {
+    .addCase(getAllMoviesByGenre.fulfilled, (state, action) => {
         state.moviePage = action.payload
         state.movies = action.payload.results
         state.total_results = action.payload.total_pages
         state.total_pages = action.payload.total_pages
         
     })
-    .addCase(getMovieSearch.rejected, (state, actions) => {
+    .addCase(getAllMoviesByGenre.rejected, (state, actions) => {
         state.movies = [];
         state.moviePage = {
             page: 0,
@@ -59,15 +58,14 @@ const MovieSearchSlice = createSlice({
         
     })
   })
-  const {reducer: movieSearchReducer, actions} = MovieSearchSlice
+  const {reducer: movieByGenreReducer, actions} = MoviesByGenreSlice
 
-  const MovieSearchActions = {
+  const MovieByGenreActions = {
     ...actions,
     
   }
 export {
-  MovieSearchActions,
-  movieSearchReducer,
-  getMovieSearch
+    MovieByGenreActions,
+    movieByGenreReducer,
+    getAllMoviesByGenre
 }
-export {}

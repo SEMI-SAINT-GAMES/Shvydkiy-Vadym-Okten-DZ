@@ -9,10 +9,10 @@ interface IProps extends PropsWithChildren {
 }
 export const Movie: FC<IProps> = ({movie}) => {
     return(
-        <Link to={`../movie-details/:${movie.id}`}> 
+        <Link to={`../movie-details/:${movie.id}`} style={{ textDecoration: 'none' }}> 
     <div className="movie">
         
-        <img src={imageBaseURL + movie.poster_path} alt="Фото фільма 1"></img>
+        <img src={imageBaseURL + movie.poster_path} alt="NoPhoto"></img>
       <div className="movieTitle"><h2>{movie.title}</h2></div>
        {/* {movie.name} */}
       <Raiting rate = {movie.vote_average}/>

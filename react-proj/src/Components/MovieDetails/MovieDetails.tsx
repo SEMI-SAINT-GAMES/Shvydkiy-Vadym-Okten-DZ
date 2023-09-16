@@ -15,7 +15,7 @@ export const MovieDetails = () => {
         dispatch(getOneMovieById({id: movieId}))
         }, [])
     
-    console.log(movie.adult)
+    console.log(movie)
     return(
         <div>
           {movie.title}

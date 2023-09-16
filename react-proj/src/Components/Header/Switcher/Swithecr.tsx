@@ -72,7 +72,7 @@ export const Switcher: React.FC<SwitcherProps> = ({setIsDark, isDark}) => {
     return(
         <div className='switcher'>
             <FormControlLabel
-        control={<MaterialUISwitch sx={{ m: 1 }} defaultChecked onChange={handleChange}/>}
+        control={<MaterialUISwitch sx={{ m: 1 }}  onChange={handleChange}/>}
         label= {label}
       /> 
         </div>

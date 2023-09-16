@@ -22,6 +22,7 @@ code {
   background-color: rgb(71, 69, 0);
   display: flex;
   flex-direction: row-reverse;
+  justify-content: space-around;
   padding-right: 30px;
 }
 .avatar{
@@ -79,20 +80,62 @@ code {
   text-align: center;
   box-shadow: 5px 5px 5px #000000;
   max-width: 100%; 
-  
- 
+  height: 600px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.genresConteiner{
+  margin-top: 20px;
+  padding: 20px;
+}
+.genres{
+  margin: 20px;
+  display: grid;
+  grid-gap: 20px;
+}
+@media (min-width: 350px) {
+  .genres {
+    grid-template-columns: repeat(2, 1fr); /* 3 колонки на один ряд */
+  }
+}
+@media (min-width: 650px) {
+  .genres {
+    grid-template-columns: repeat(3, 1fr); /* 3 колонки на один ряд */
+  }
+}
 
+@media (min-width: 920px) {
+  .genres {
+    grid-template-columns: repeat(4, 1fr); /* Повертаємо 4 колонки на один ряд */
+  }
 }
 .movie img {
   max-width: 100%;
   height: auto;
 }
-.movieTitle{
-  height: 100px;
-}
+
 .movie h2 {
   margin: 10px 0;
   color: #333; /* Темний текст */
+  
+}
+.genre{
+  background-color: #FFD700;
+  border: 1px solid #FFD700;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 5px 5px 5px #000000;
+  max-width: 100%; 
+  
+}
+.linksDiv{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ width: 50%;
+ 
   
 }
 .searchDiv{
@@ -100,5 +143,15 @@ code {
   flex-direction: row-reverse;
   align-items: center;
   justify-content: space-between;
- margin-right: 70px;
+
 }
+.links{
+  color: rgb(0, 87, 163);
+  text-decoration: none;
+
+}
+.genresLinks{
+  color: rgb(0, 87, 163);
+  text-decoration: none;
+}
+

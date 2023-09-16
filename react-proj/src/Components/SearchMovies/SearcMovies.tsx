@@ -1,5 +1,5 @@
 import { PropsWithChildren, useEffect } from "react"
-import { useParams } from "react-router-dom"
+import { useParams, useSearchParams } from "react-router-dom"
 import { useAppDispatch, useAppSelector } from "../../Hooks/reduxHooks"
 import { getMovieSearch } from "../../Redux/Slices/SearchMoviesSlice"
 import { Movie } from "../Movies/Movie/Movie"
@@ -11,14 +11,16 @@ export const SearchMovies = () => {
     const movieParams = params?.slice(1)
     const dispatch = useAppDispatch()
     const {movies, moviePage} = useAppSelector(state => state.movieSearch)
-
+    const [querry, setQuerry] = useSearchParams({page: `1`})
     useEffect(() => {
-        dispatch(getMovieSearch({params: movieParams!}))
-    }, [movieParams])
+        dispatch(getMovieSearch({params: movieParams!, page: querry.get(`page`)!}))
+    }, [querry.get(`page`)])
     console.log(moviePage)
     return(
-        <div className="Movies">
+        <>
+        {movieParams === "" ? (<div className="sss">No Results Found</div>) : (<div className="Movies">
             {movies.map(movie => <Movie key = {movie.id} movie = {movie}/>)}
-        </div>
+        </div>)}
+        </>
     )
 }
