@@ -8,8 +8,7 @@ export const SearcMoviesConteiner = () => {
        
         <div className="moviesConteiner">
             <SearchMovies/>
-            <br/>
-            <MoviesPages/>
+            
         </div>
         
     )

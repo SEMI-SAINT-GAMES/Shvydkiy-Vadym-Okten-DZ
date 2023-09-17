@@ -1,6 +1,7 @@
 import { FC, PropsWithChildren, useEffect, useState } from "react"
 import { useSearchParams } from "react-router-dom"
 import { useAppDispatch, useAppSelector } from "../../Hooks/reduxHooks"
+import { MoviesPages } from "../../Pagination/Pagination"
 import { getAllMovies, MovieActions } from "../../Redux/Slices/MovieSlice"
 import { Movie } from "./Movie/Movie"
 
@@ -21,9 +22,13 @@ export const Movies: FC<IProps>= () => {
     }, [querry.get(`page`)])
     console.log(movies)
     return(
+        <div>
         <div className="Movies">
             {movies.map(movie => <Movie key = {movie.id} movie = {movie}/>)}
             
+        </div>
+        <br />
+        <MoviesPages pages = {500}/>
         </div>
     )
 }

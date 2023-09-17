@@ -44,11 +44,8 @@ const Header = () => {
              />
            </div>
            <div className='linksDiv'>
-           <Link to = "popular" className="links">Popular</Link>
-           <Link to = "popular" className="links">Trending</Link>
-           <Link to = "popular" className="links">Top Rated</Link>
-           <Link to = "popular" className="links">Upcoming</Link>
-           <Link to = "genres" className="links">Genres</Link>
+           <Link to = "popular" className="links">MOVIES</Link>
+           <Link to = "genres" className="links">GENRES</Link>
            </div>
         </div>
         </ThemeProvider>

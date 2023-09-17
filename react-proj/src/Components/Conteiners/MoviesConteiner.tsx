@@ -8,8 +8,6 @@ export const MoviesConteiner = () => {
         <div className="moviesConteiner">
             <h1>POPULAR MOVIES</h1>
             <Movies/>
-            <br/>
-            <MoviesPages/>
         </div>
         
     )
