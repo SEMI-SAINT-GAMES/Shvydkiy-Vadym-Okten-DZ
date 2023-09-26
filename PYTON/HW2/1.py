@@ -13,6 +13,7 @@ add, get = notebook()
 add('sss')
 add('lll')
 get()
+
 print('#'*20)
 print('2) протипізувати перше завдання')
 def notebook_with_type():
@@ -29,6 +30,7 @@ add1, get1 = notebook_with_type()
 add('jjj') 
 add('ddd')
 get()
+
 print('#'*20)
 print('3) створити функцію котра буде повертати сумму розрядів числа у вигляді строки ')
 def func(num: int) -> str:
@@ -38,7 +40,8 @@ def func(num: int) -> str:
         if value != '0':
             l.append(value + "0"* (len(s) - i - 1))
     return '+'.join(i for i in l)      
-print(func(2345))        
+print(func(2345))   
+
 print('#'*20)
 print('4) створити декоратор котрий буде підраховувати скільки разів була запущена функція продекорована цим декоратором')
 def decorator(func):
