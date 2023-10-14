@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-xnu5hju9s@vekwenic!!#rr=wy0^6qmtf4k-_&*n3!pd*o!sw='
+SECRET_KEY = 'django-insecure-3t7ml=a*42$16cbx5wv6xckg1*xv11p%&(ruo)h&%wq@%kr-7_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -34,6 +34,9 @@ INSTALLED_APPS = [
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.staticfiles',
+
+    #myapps
+    'cars',
 ]
 
 MIDDLEWARE = [
@@ -69,7 +72,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'vadikDB',
-        'USER':'root'
+        'USERNAME':'root',
+        'PASSWORD':'Boss7878',
+        'HOST':'localhost',
+        'PORT':3306
     }
 }
 
@@ -114,3 +120,4 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+APPEND_SLASH=False

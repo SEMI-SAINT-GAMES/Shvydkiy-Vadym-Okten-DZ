@@ -10,7 +10,7 @@ class Cars extends Component{
         }
     }
     componentDidMount() {
-        axios.get(`http://owu.linkpc.net/carsAPI/v1/cars`).then(({data}) => this.setState({cars:data}))
+        axios.get(`localhost:8000/cars`).then(({data}) => this.setState({cars:data}))
     }
 
     render() {
@@ -21,7 +21,6 @@ class Cars extends Component{
                         <div className="Post">
                             {car.id}
                             {car.brand}
-                            {car.year}
                         </div>
                     )
                 } )}

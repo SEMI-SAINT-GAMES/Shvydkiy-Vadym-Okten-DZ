@@ -1,5 +1,5 @@
 #!/bin/sh
-'''exec' "/Users/1/Documents/GitHub/Shvydkiy-Vadym-Okten-DZ/PYTHON/HW DRF 1/venv/bin/python3.11" "$0" "$@"
+'''exec' "/Users/vadsh/Desktop/Shvydkiy-Vadym-Okten-DZ/PYTHON/HW DRF 1/venv/bin/python3.11" "$0" "$@"
 ' '''
 # -*- coding: utf-8 -*-
 import re
